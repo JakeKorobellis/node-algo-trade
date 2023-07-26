@@ -6,7 +6,8 @@ const barsElem = document.getElementById("bars");
 //currBar gets updated based on trades that are comming through
 let currBar = {};
 let trades = [];
-
+console.log(trades);
+console.log(currBar);
 //Light weight chart varibales
 let chart = LightweightCharts.createChart(document.getElementById("bars"), {
   width: 1000,
@@ -89,7 +90,7 @@ fetch(barsURL, {
 socket.onmessage = (event) => {
   const checkConnection = JSON.parse(event.data);
   const dataMsg = checkConnection[0]["msg"];
-
+  console.log(checkConnection[0]);
   //Attempt connection
   if (dataMsg == "connected") {
     console.log("Authenticating...");
@@ -125,6 +126,7 @@ socket.onmessage = (event) => {
           //remove first elem as that is the oldest
           quotesElem.removeChild(lengthCheck[0]);
         }
+
         break;
       case "t":
         //  console.log("Got a Trade");
