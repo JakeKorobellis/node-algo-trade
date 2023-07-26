@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Open+Sans:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #33363b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+#quotes {
+  height: 30vh;
+  width: 30vw;
+  background: black;
+  color: white;
+  overflow-y: auto;
+  scroll-snap-align: end;
+  border-radius: 5px;
+  font-family: "Barlow", sans-serif;
+}
+#trades {
+  height: 30vh;
+  width: 30vw;
+  background: black;
+  color: white;
+  overflow-y: auto;
+  scroll-snap-align: end;
+  border-radius: 5px;
+  font-family: "Barlow", sans-serif;
+}
+#bars {
+  height: 40vh;
+  width: 60vw;
+  background: black;
+}
+.quote-trades-holder {
+  display: flex;
+  gap: 5%;
+}
+.trade-render {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  padding: 0.8%;
+}
+.quote-render {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  padding: 0.8%;
+}
+.title {
+  display: flex;
+}
+.time {
+  width: 40%;
+  display: flex;
+  padding-left: 6.5%;
+}
+.size {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  padding-left: 0.5%;
+  padding-right: 3%;
+}
+.price {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algo Trading Bot</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body class="body">
+    <div id="bars"></div>
+    <div class="quote-trades-holder">
+      <div id="quotes">
+        <div class="title">
+          <span class="time">Time</span>
+          <span class="size">Bid</span>
+          <span class="price">Ask</span>
+        </div>
+      </div>
+      <div id="trades">
+        <div class="title">
+          <span class="time">Time</span>
+          <span class="size">Size</span>
+          <span class="price">Price</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
