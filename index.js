@@ -38,7 +38,7 @@ let chart = LightweightCharts.createChart(document.getElementById("bars"), {
 let candleSeries = chart.addCandlestickSeries();
 
 //Connect to websocket, send / recieve messages
-const url = "wss://stream.data.alpaca.markets/v1beta2/crypto";
+const url = "wss://stream.data.alpaca.markets/v1beta3/crypto/us";
 const socket = new WebSocket(url);
 //auth details
 const authDetails = {
@@ -57,7 +57,7 @@ const subData = {
 //get historical data to fill the chart
 const start = new Date(Date.now() - 7200 * 10000).toISOString();
 const barsURL =
-  "https://data.alpaca.markets/v1beta1/crypto/ETHUSD/bars?exchanges=CBSE&timeframe=1Min&start=" +
+  "https://data.alpaca.markets/v1beta3/crypto/us/bars?symbols=ETH%2FUSD&timeframe=1Min&start=" +
   start;
 
 //fetch historical data for chart
@@ -69,9 +69,9 @@ fetch(barsURL, {
 })
   .then((r) => r.json())
   .then((response) => {
-    console.log(response);
+    console.log(response.bars["ETH/USD"]);
 
-    let data = response.bars.map((curr) => ({
+    let data = response.bars["ETH/USD"].map((curr) => ({
       open: curr.o,
       high: curr.h,
       low: curr.l,
